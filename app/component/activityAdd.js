@@ -5,22 +5,16 @@
 
 import React, { Component } from 'react';
 import { Text, Card, CardItem, Body, Button, Right, Icon,
-            Form, Item, Input, Label } from 'native-base';
-import { StyleSheet, View, Dimensions } from 'react-native';
+            Form, Item, Input, Label, Container } from 'native-base';
 
 export default class extends Component {
-    styles = StyleSheet.create({
-        container: {
-            width: Dimensions.get('window').width,
-            height: Dimensions.get('window').height,
-            backgroundColor: '#FFFFFF00',
-            padding: 10,
-            paddingBottom: Dimensions.get('window').height * 0.5,
-        } });
+    static navigationOptions = {
+        title: 'Add an activity',
+    };
 
     render() {
         return (
-            <View style={this.styles.container}>
+            <Container>
                 <Card>
                     <CardItem header>
                         <Text>Add activity</Text>
@@ -48,7 +42,7 @@ export default class extends Component {
                         </Body>
                     </CardItem>
                 </Card>
-            </View>
+            </Container>
         );
     }
 }

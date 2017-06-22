@@ -1,13 +1,17 @@
 // @flow
 
-import { TabNavigator, TabBarBottom } from 'react-navigation';
+import { StackNavigator, TabNavigator, TabBarBottom, NavigationContainer } from 'react-navigation';
 
 import Activities from './component/activities';
 import Feeds from './component/feeds';
 import Friends from './component/friends';
 import Profile from './component/profile';
 
-export default TabNavigator({
+import ActivityDo from './component/activityDo';
+import ActivityAdd from './component/activityAdd';
+import Followers from './component/followers';
+
+const MainScreen: NavigationContainer = TabNavigator({
     Activities: {
         screen: Activities,
     },
@@ -26,5 +30,20 @@ export default TabNavigator({
     tabBarPosition: 'bottom',
     tabBarComponent: TabBarBottom,
     tabBarOptions: { // https://reactnavigation.org/docs/navigators/tab#tabBarOptions-for-TabBarBottom-default-tab-bar-on-iOS
+    },
+});
+
+export default StackNavigator({
+    Root: {
+        screen: MainScreen,
+    },
+    ActivityDo: {
+        screen: ActivityDo,
+    },
+    ActivityAdd: {
+        screen: ActivityAdd,
+    },
+    Followers: {
+        screen: Followers,
     },
 });

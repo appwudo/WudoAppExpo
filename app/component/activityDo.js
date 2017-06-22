@@ -4,47 +4,36 @@
  */
 
 import React, { Component } from 'react';
-import { AutoGrowingTextInput } from 'react-native-autogrow-textinput';
-import { Text, Card, CardItem, Body, Button, Right, Icon } from 'native-base';
-import { StyleSheet, View, Dimensions, TextInput } from 'react-native';
+// import { AutoGrowingTextInput } from 'react-native-autogrow-textinput';
+import { Container, Text, Card, CardItem, Body, Button } from 'native-base';
+import { View, TextInput } from 'react-native';
 
 export default class extends Component {
-    styles = StyleSheet.create({
-        container: {
-            width: Dimensions.get('window').width,
-            height: Dimensions.get('window').height,
-            backgroundColor: '#FFFFFF00',
-            padding: 10,
-            paddingBottom: Dimensions.get('window').height * 0.5,
-        } });
+    static navigationOptions = {
+        title: 'Do an activity', // we could use navigation.state.params.name
+    };
 
     render() {
-        // height: Dimensions.get('window').height * 0.3,
         return (
-            <View style={this.styles.container}>
+            <Container>
                 <Card>
                     <CardItem header>
                         <Text>Climbing</Text>
-                        <Right>
-                            <Button info transparent>
-                                <Icon name="close" />
-                            </Button>
-                        </Right>
                     </CardItem>
                     <CardItem style={{ flex: 1 }}>
                         <Body>
                             {/*<AutoGrowingTextInput placeholder={'Put some details...'} />*/}
-        <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={{flex: 1}}>
-                                  <TextInput
-        style={{borderColor: 'gray', borderWidth: 1}}
-        editable = {true}
-        maxLength = {40}
-         multiline = {true}
-         numberOfLines = {4}        
-      />
-          </View>
-        </View>                            
+                            <View style={{ flex: 1, flexDirection: 'row' }}>
+                                <View style={{ flex: 1 }}>
+                                    <TextInput
+                                      style={{ borderColor: 'gray', borderWidth: 1 }}
+                                      editable
+                                      maxLength={40}
+                                      multiline
+                                      numberOfLines={4}
+                                    />
+                                </View>
+                            </View>
                         </Body>
                     </CardItem>
                     <CardItem footer>
@@ -55,7 +44,7 @@ export default class extends Component {
                         </Body>
                     </CardItem>
                 </Card>
-            </View>
+            </Container>
         );
     }
 }

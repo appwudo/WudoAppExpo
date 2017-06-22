@@ -5,12 +5,15 @@
 
 import React, { Component } from 'react';
 import { Text, Card, CardItem, Button, Right, Icon,
-        Thumbnail, Left, Body, CheckBox } from 'native-base';
-import { StyleSheet, View, Dimensions } from 'react-native';
+        Thumbnail, Left, Body, CheckBox, Container } from 'native-base';
 
 import data from '../../__mock__/data';
 
 export default class extends Component {
+    static navigationOptions = {
+        title: 'Followers', // we could use navigation.state.params.name
+    };
+
     getFollowers(): {}[] {
         return data.activities.id23233223.followers;
     }
@@ -21,24 +24,16 @@ export default class extends Component {
 
     getAvatar(index: number) {
         const img = index % 5;
-        if (img === 1) return require('../img/avatars/1.png');
-        if (img === 2) return require('../img/avatars/2.png');
-        if (img === 3) return require('../img/avatars/3.png');
-        if (img === 4) return require('../img/avatars/4.png');
-        return require('../img/avatars/0.png');
+        if (img === 1) return require('../../assets/images/avatars/1.png');
+        if (img === 2) return require('../../assets/images/avatars/2.png');
+        if (img === 3) return require('../../assets/images/avatars/3.png');
+        if (img === 4) return require('../../assets/images/avatars/4.png');
+        return require('../../assets/images/avatars/0.png');
     }
-
-    styles = StyleSheet.create({
-        container: {
-            width: Dimensions.get('window').width,
-            height: Dimensions.get('window').height - 20,
-            backgroundColor: '#FFFFFF00',
-            padding: 10,
-        } });
 
     render() {
         return (
-            <View style={this.styles.container}>
+            <Container>
                 <Card>
                     <CardItem header>
                         <Text>Running</Text>
@@ -62,7 +57,7 @@ export default class extends Component {
                         </CardItem>),
                     )}
                 </Card>
-            </View>
+            </Container>
         );
     }
 }

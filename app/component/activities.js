@@ -3,18 +3,30 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Text, ListItem, Right, Body, Button, Container } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
 import data from '../../__mock__/data';
 
 export default class extends Component {
-    static navigationOptions = {
-        tabBarLabel: 'Activities',
-        tabBarIcon: ({ tintColor }) => (
-            <Ionicons name="md-basketball" size={26} color={tintColor} />
-        ),
+    static propTypes = {
+        navigation: PropTypes.object.isRequired, // eslint-disable-line
+    }
+
+    static navigationOptions = (props) => {
+        return {
+            title: 'Activities',
+            tabBarLabel: 'Activities',
+            tabBarIcon: ({ tintColor }) => (
+                <Ionicons name="md-basketball" size={26} color={tintColor} />
+            ),
+            headerRight: (
+                <Button rounded info title="Add" onPress={() => props.navigation.navigate('ActivityAdd')}>
+                    <Text>Add</Text>
+                </Button>
+            ),
+        };
     };
 
     getActivities() {
@@ -25,20 +37,12 @@ export default class extends Component {
         return Object.keys(this.getActivities());
     }
 
-    showLightBox(screenName: string): void {
-        console.log('Open screen', screenName);
-    }
-
     showFollowers(): void {
-        this.showLightBox('followers');
-    }
-
-    addActivity(): void {
-        this.showLightBox('addActivity');
+        this.props.navigation.navigate('Followers');
     }
 
     doActivity(): void {
-        this.showLightBox('doActivity');
+        this.props.navigation.navigate('ActivityDo'); // , { name: 'Jordan' }
     }
 
     render() {

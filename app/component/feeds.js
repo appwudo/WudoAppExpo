@@ -14,6 +14,7 @@ import data from '../../__mock__/data';
 
 export default class extends Component {
     static navigationOptions = {
+        title: 'Feeds',
         tabBarLabel: 'Feeds',
         tabBarIcon: ({ tintColor }) => (
             <Ionicons name="md-list" size={26} color={tintColor} />

@@ -12,6 +12,7 @@ import data from '../../__mock__/data';
 
 export default class extends Component {
     static navigationOptions = {
+        title: 'Friends',
         tabBarLabel: 'Friends',
         tabBarIcon: ({ tintColor }) => (
             <Ionicons name="md-contacts" size={26} color={tintColor} />
