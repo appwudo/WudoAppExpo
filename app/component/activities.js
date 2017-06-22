@@ -7,7 +7,7 @@ import React, { Component, PropTypes } from 'react';
 import { Text, ListItem, Right, Body, Button, Container } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
-import i18n from '../lib/i18n';
+import i18n from '../i18n';
 
 import data from '../../__mock__/data';
 
