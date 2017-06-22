@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import { Text, ListItem, Right, Body, Button, Container,
             Left, Thumbnail } from 'native-base';
 import { TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import moment from 'moment';
 
 import data from '../../__mock__/data';
@@ -14,6 +15,9 @@ import data from '../../__mock__/data';
 export default class extends Component {
     static navigationOptions = {
         tabBarLabel: 'Feeds',
+        tabBarIcon: ({ tintColor }) => (
+            <Ionicons name="md-list" size={26} color={tintColor} />
+        ),
     };
 
     getFeedKeys(): string[] {

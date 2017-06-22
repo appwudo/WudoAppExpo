@@ -1,6 +1,7 @@
 import Expo, { Constants } from 'expo';
 import React from 'react';
 import { View } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 import cacheAssetsAsync from './app/lib/cacheAssetsAsync.helper';
 import Wudo from './app/main';
@@ -25,7 +26,7 @@ export default class extends React.Component {
                     require('./assets/images/avatars/4.png'),
                 ],
                 fonts: [
-                    // FontAwesome.font,
+                    FontAwesome.font,
                     { 'Roboto_regular': require('./assets/fonts/Roboto-Regular.ttf') },
                     { 'Roboto_medium': require('./assets/fonts/Roboto-Medium.ttf') },
                 ],

@@ -3,18 +3,20 @@
  * @flow
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Text, ListItem, Right, Body, Container,
             Left, Thumbnail, Icon } from 'native-base';
-import { TouchableOpacity } from 'react-native';
-import moment from 'moment';
+import { Ionicons } from '@expo/vector-icons';
 
 import data from '../../__mock__/data';
 
 export default class extends Component {
-    static propTypes = {
-        navigator: PropTypes.object.isRequired, // eslint-disable-line
-    }
+    static navigationOptions = {
+        tabBarLabel: 'Friends',
+        tabBarIcon: ({ tintColor }) => (
+            <Ionicons name="md-contacts" size={26} color={tintColor} />
+        ),
+    };
 
     getFriendKeys(): string[] {
         return Object.keys(data.friends);
@@ -30,7 +32,7 @@ export default class extends Component {
                 { this.getFriendKeys().map(id =>
                     (<ListItem key={id} avatar>
                         <Left>
-                            <Thumbnail source={require('../img/avatars/0.png')} />
+                            <Thumbnail source={require('../../assets/images/avatars/0.png')} />
                         </Left>
                         <Body>
                             <Text>

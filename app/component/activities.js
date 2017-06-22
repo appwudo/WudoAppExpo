@@ -5,12 +5,16 @@
 
 import React, { Component } from 'react';
 import { Text, ListItem, Right, Body, Button, Container } from 'native-base';
+import { Ionicons } from '@expo/vector-icons';
 
 import data from '../../__mock__/data';
 
 export default class extends Component {
     static navigationOptions = {
         tabBarLabel: 'Activities',
+        tabBarIcon: ({ tintColor }) => (
+            <Ionicons name="md-basketball" size={26} color={tintColor} />
+        ),
     };
 
     getActivities() {
