@@ -7,6 +7,8 @@ import React, { Component, PropTypes } from 'react';
 import { Text, ListItem, Right, Body, Button, Container } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
+import i18n from '../lib/i18n';
+
 import data from '../../__mock__/data';
 
 export default class extends Component {
@@ -16,8 +18,8 @@ export default class extends Component {
 
     static navigationOptions = (props) => {
         return {
-            title: 'Activities',
-            tabBarLabel: 'Activities',
+            title: i18n.t('Activities'),
+            tabBarLabel: i18n.t('Activities'),
             tabBarIcon: ({ tintColor }) => (
                 <Ionicons name="md-basketball" size={26} color={tintColor} />
             ),
