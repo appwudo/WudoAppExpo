@@ -8,9 +8,13 @@ import React, { Component } from 'react';
 import { Container, Text, Card, CardItem, Body, Button } from 'native-base';
 import { View, TextInput } from 'react-native';
 
+import { stackNavStyles } from '../styles';
+
 export default class extends Component {
     static navigationOptions = {
         title: 'Do an activity', // we could use navigation.state.params.name
+        headerStyle: stackNavStyles.header,
+        headerTitleStyle: stackNavStyles.headerTitle,
     };
 
     render() {

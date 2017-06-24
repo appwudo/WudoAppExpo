@@ -8,6 +8,7 @@ import { Text, ListItem, Right, Body, Button, Container } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
 import i18n from '../i18n';
+import { stackNavStyles } from '../styles';
 
 import data from '../../__mock__/data';
 
@@ -28,6 +29,8 @@ export default class extends Component {
                     <Text>Add</Text>
                 </Button>
             ),
+            headerStyle: stackNavStyles.header,
+            headerTitleStyle: stackNavStyles.headerTitle,
         };
     };
 

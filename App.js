@@ -1,8 +1,9 @@
-import Expo, { Constants } from 'expo';
+import Expo from 'expo';
 import React from 'react';
 import { View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
+import styles from './app/styles';
 import cacheAssetsAsync from './app/lib/cacheAssetsAsync.helper';
 import Wudo from './app/main';
 
@@ -45,7 +46,7 @@ export default class extends React.Component {
     render() {
         if (this.state.appIsReady) {
             return (
-                <View style={{ flex: 1, marginTop: Constants.statusBarHeight }}>
+                <View style={styles.root}>
                     <Wudo />
                 </View>
             );

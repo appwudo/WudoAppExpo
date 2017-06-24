@@ -7,9 +7,13 @@ import React, { Component } from 'react';
 import { Text, Card, CardItem, Body, Button, Right, Icon,
             Form, Item, Input, Label, Container } from 'native-base';
 
+import { stackNavStyles } from '../styles';
+
 export default class extends Component {
     static navigationOptions = {
         title: 'Add an activity',
+        headerStyle: stackNavStyles.header,
+        headerTitleStyle: stackNavStyles.headerTitle,
     };
 
     render() {

@@ -7,11 +7,15 @@ import React, { Component } from 'react';
 import { Text, Card, CardItem, Button, Right, Icon,
         Thumbnail, Left, Body, CheckBox, Container } from 'native-base';
 
+import { stackNavStyles } from '../styles';
+
 import data from '../../__mock__/data';
 
 export default class extends Component {
     static navigationOptions = {
         title: 'Followers', // we could use navigation.state.params.name
+        headerStyle: stackNavStyles.header,
+        headerTitleStyle: stackNavStyles.headerTitle,
     };
 
     getFollowers(): {}[] {
