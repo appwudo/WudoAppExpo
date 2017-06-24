@@ -21,3 +21,4 @@ To edit the code open VScode and select the folder of the project.
 - We are using the component library native base: https://nativebase.io/
 - List of available component are there: https://docs.nativebase.io/Components.html#Components
 - Here they explain how to customize the design: https://docs.nativebase.io/Customize.html
+
