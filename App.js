@@ -2,8 +2,11 @@ import Expo from 'expo';
 import React from 'react';
 import { View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { StyleProvider } from 'native-base';
 
 import styles from './app/styles';
+import getTheme from './app/styles/native-base-theme/components';
+import theme from './app/styles/native-base-theme/variables/commonColor';
 import cacheAssetsAsync from './app/lib/cacheAssetsAsync.helper';
 import Wudo from './app/main';
 
@@ -46,9 +49,11 @@ export default class extends React.Component {
     render() {
         if (this.state.appIsReady) {
             return (
-                <View style={styles.root}>
-                    <Wudo />
-                </View>
+                <StyleProvider style={getTheme(theme)}>
+                    <View style={styles.root}>
+                        <Wudo />
+                    </View>
+                </StyleProvider>
             );
         }
         return <Expo.AppLoading />;
