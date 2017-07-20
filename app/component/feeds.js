@@ -10,6 +10,8 @@ import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import moment from 'moment';
 
+import { stackNavStyles } from '../styles';
+
 import data from '../../__mock__/data';
 
 export default class extends Component {
@@ -19,6 +21,8 @@ export default class extends Component {
         tabBarIcon: ({ tintColor }) => (
             <Ionicons name="md-list" size={26} color={tintColor} />
         ),
+        headerStyle: stackNavStyles.header,
+        headerTitleStyle: stackNavStyles.headerTitle,
     };
 
     getFeedKeys(): string[] {

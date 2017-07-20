@@ -8,6 +8,8 @@ import { Text, ListItem, Right, Body, Container,
             Left, Thumbnail, Icon } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
+import { stackNavStyles } from '../styles';
+
 import data from '../../__mock__/data';
 
 export default class extends Component {
@@ -17,6 +19,8 @@ export default class extends Component {
         tabBarIcon: ({ tintColor }) => (
             <Ionicons name="md-contacts" size={26} color={tintColor} />
         ),
+        headerStyle: stackNavStyles.header,
+        headerTitleStyle: stackNavStyles.headerTitle,
     };
 
     getFriendKeys(): string[] {

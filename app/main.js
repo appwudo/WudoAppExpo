@@ -2,6 +2,8 @@
 
 import { StackNavigator, TabNavigator, TabBarBottom, NavigationContainer } from 'react-navigation';
 
+import { tabBarStyles, stackNavStyles } from './styles';
+
 import Activities from './component/activities';
 import Feeds from './component/feeds';
 import Friends from './component/friends';
@@ -29,8 +31,7 @@ const MainScreen: NavigationContainer = TabNavigator({
     animationEnabled: false,
     tabBarPosition: 'bottom',
     tabBarComponent: TabBarBottom,
-    tabBarOptions: { // https://reactnavigation.org/docs/navigators/tab#tabBarOptions-for-TabBarBottom-default-tab-bar-on-iOS
-    },
+    tabBarOptions: tabBarStyles,
 });
 
 export default StackNavigator({
@@ -46,4 +47,6 @@ export default StackNavigator({
     Followers: {
         screen: Followers,
     },
+}, {
+    cardStyle: stackNavStyles.style,
 });
