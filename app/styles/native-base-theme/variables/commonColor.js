@@ -12,11 +12,11 @@ export default {
     platform,
     // AndroidRipple
     androidRipple: true,
-    androidRippleColor: 'rgba(256, 256, 256, 0.3)',
+    androidRippleColor: 'rgba(0, 149, 171, 0.3)',
     androidRippleColorDark: 'rgba(0, 0, 0, 0.15)',
 
     // Badge
-    badgeBg: '#ED1727',
+    badgeBg: '#FFA300',
     badgeColor: '#fff',
     // New Variable
     badgePadding: platform === 'ios' ? 3 : 0,
@@ -24,7 +24,7 @@ export default {
     // Button
     btnFontFamily: platform === 'ios' ? 'System' : 'Roboto_medium',
     btnDisabledBg: '#b5b5b5',
-    btnDisabledClr: '#f1f1f1',
+    btnDisabledClr: '#f0ae2f2',
 
     // CheckBox
     CheckboxRadius: platform === 'ios' ? 13 : 0,
@@ -35,7 +35,7 @@ export default {
     CheckboxIconMarginTop: platform === 'ios' ? undefined : 1,
     CheckboxFontSize: platform === 'ios' ? 23 / 0.9 : 18,
     DefaultFontSize: 17,
-    checkboxBgColor: '#039BE5',
+    checkboxBgColor: '#FFC580',
     checkboxSize: 20,
     checkboxTickColor: '#fff',
 
@@ -108,12 +108,12 @@ export default {
     cardDefaultBg: '#fff',
 
     // Color
-    brandPrimary: '#2874F0',
-    brandInfo: '#62B1F6',
-    brandSuccess: '#5cb85c',
-    brandDanger: '#d9534f',
-    brandWarning: '#f0ad4e',
-    brandSidebar: '#252932',
+    brandPrimary: '#0095AB',
+    brandInfo: '#FFA300',
+    brandSuccess: '#0AE2F2',
+    brandDanger: '#EA0032',
+    brandWarning: '#FF0043',
+    brandSidebar: '#FFBE8D',
 
     // Font
     fontFamily: platform === 'ios' ? 'System' : 'Roboto',
@@ -131,15 +131,15 @@ export default {
 
     // Footer
     footerHeight: 55,
-    footerDefaultBg: '#2874F0',
+    footerDefaultBg: '#0095AB',
 
     // FooterTab
-    tabBarTextColor: '#8bb3f4',
+    tabBarTextColor: '#0ae2f2',
     tabBarTextSize: platform === 'ios' ? 14 : 11,
-    activeTab: platform === 'ios' ? '#007aff' : '#fff',
-    sTabBarActiveTextColor: '#007aff',
+    activeTab: platform === 'ios' ? '#ffbe8d' : '#fff',
+    sTabBarActiveTextColor: '#ffbe8d',
     tabBarActiveTextColor: '#fff',
-    tabActiveBgColor: platform === 'ios' ? '#1569f4' : undefined,
+    tabActiveBgColor: platform === 'ios' ? '#0095ab' : undefined,
 
     // Tab
     tabDefaultBg: '#2874F0',
