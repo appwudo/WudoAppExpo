@@ -12,6 +12,7 @@ export const tabBarStyles = {
     },
     labelStyle: { // style of the label part
         backgroundColor: '#EEE',
+        // backgroundColor: '#F00',
     },
 };
 

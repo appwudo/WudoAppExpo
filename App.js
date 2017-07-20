@@ -8,7 +8,7 @@ import styles from './app/styles';
 import getTheme from './app/styles/native-base-theme/components';
 import theme from './app/styles/native-base-theme/variables/commonColor';
 import cacheAssetsAsync from './app/lib/cacheAssetsAsync.helper';
-import Wudo from './app/main';
+import Router from './app/router';
 
 export default class extends React.Component {
     state = {
@@ -51,7 +51,7 @@ export default class extends React.Component {
             return (
                 <StyleProvider style={getTheme(theme)}>
                     <View style={styles.root}>
-                        <Wudo />
+                        <Router />
                     </View>
                 </StyleProvider>
             );

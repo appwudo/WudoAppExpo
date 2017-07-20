@@ -1,4 +1,4 @@
 
 export default {
-    'Activities': 'Activities',
+    Activities: 'Activities',
 };

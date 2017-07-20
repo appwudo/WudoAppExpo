@@ -3,19 +3,25 @@
  * @flow
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Text, ListItem, Right, Body, Button, Container } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
+import { NavigationScreenProp } from 'react-navigation';
 
 import i18n from '../i18n';
 import { stackNavStyles } from '../styles';
 
 import data from '../../__mock__/data';
 
-export default class extends Component {
-    static propTypes = {
-        navigation: PropTypes.object.isRequired, // eslint-disable-line
-    }
+type DefaultProps = {};
+type Props = {
+    navigation: NavigationScreenProp
+//   i18n: I18n   // we should pass i18n in props
+};
+type State = {};
+
+export default class extends Component<DefaultProps, Props, State> {
+    props: Props;
 
     static navigationOptions = (props) => {
         return {
