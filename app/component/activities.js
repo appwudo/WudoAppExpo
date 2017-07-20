@@ -1,6 +1,7 @@
 /**
  * Wudo
  * @flow
+ * test
  */
 
 import React, { Component, PropTypes } from 'react';
