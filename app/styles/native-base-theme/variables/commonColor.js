@@ -22,9 +22,9 @@ export default {
     badgePadding: platform === 'ios' ? 3 : 0,
 
     // Button
-    btnFontFamily: platform === 'ios' ? 'System' : 'Roboto_medium',
-    btnDisabledBg: '#b5b5b5',
-    btnDisabledClr: '#f0ae2f2',
+    btnFontFamily: platform === 'ios' ? 'System' : 'Poppins_medium',
+    btnDisabledBg: '#a7c9d1',
+    btnDisabledClr: '#0ae2f2',
 
     // CheckBox
     CheckboxRadius: platform === 'ios' ? 13 : 0,
@@ -157,7 +157,7 @@ export default {
     toolbarSearchIconSize: platform === 'ios' ? 20 : 23,
     toolbarInputColor: platform === 'ios' ? '#CECDD2' : '#fff',
     searchBarHeight: platform === 'ios' ? 30 : 40,
-    toolbarInverseBg: '#222',
+    toolbarInverseBg: '#00202b',
     toolbarTextColor: '#fff',
     iosStatusbar: 'light-content',
     toolbarDefaultBorder: '#2874F0',
