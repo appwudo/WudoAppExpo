@@ -1,6 +1,6 @@
 import Expo from 'expo';
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { StyleProvider } from 'native-base';
 
@@ -28,11 +28,16 @@ export default class extends React.Component {
                     require('./assets/images/avatars/2.png'),
                     require('./assets/images/avatars/3.png'),
                     require('./assets/images/avatars/4.png'),
+                    require('./assets/images/muster_background.png'),
                 ],
                 fonts: [
                     FontAwesome.font,
                     { 'Roboto_regular': require('./assets/fonts/Roboto-Regular.ttf') },
                     { 'Roboto_medium': require('./assets/fonts/Roboto-Medium.ttf') },
+                    { 'Poppins_regular': require('./assets/fonts/Poppins-Regular.ttf') },
+                    { 'Poppins_medium': require('./assets/fonts/Poppins-Medium.ttf') },
+                    { 'Poppins_bold': require('./assets/fonts/Poppins-Bold.ttf') },
+                    { 'Poppins_light': require('./assets/fonts/Poppins-Light.ttf') },
                 ],
             });
         } catch (e) {
@@ -51,6 +56,10 @@ export default class extends React.Component {
             return (
                 <StyleProvider style={getTheme(theme)}>
                     <View style={styles.root}>
+                        <Image
+                            style={styles.backgroundImage}
+                            source={ require('./assets/images/muster_background.png') }
+                        />
                         <Wudo />
                     </View>
                 </StyleProvider>
