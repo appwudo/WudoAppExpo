@@ -201,7 +201,8 @@ export default {
     lineHeight: platform === 'ios' ? 20 : 24,
 
     // List
-    listBorderColor: '#c9c9c9',
+    // listBorderColor: '#A7C9D1',
+    listBorderColor: 'rgba(167, 201, 209, 0.2)',
     listDividerBg: '#f4f4f4',
     listItemHeight: 45,
     listBtnUnderlayColor: '#DDD',
@@ -258,6 +259,7 @@ export default {
     // Other
     borderRadiusBase: 10,
     borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
+    listItemBorderWidth: 6 / PixelRatio.getPixelSizeForLayoutSize(1),
     contentPadding: 10,
 
     get darkenHeader() {

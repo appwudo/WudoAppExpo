@@ -41,7 +41,7 @@ export default StyleSheet.create({
     // this root element is then calling the stackNav layout
     root: {
         flex: 1,
-        marginTop: Constants.statusBarHeight,
+        // marginTop: Constants.statusBarHeight,
     },
     backgroundImage: {
         // flex: 1,
