@@ -3,16 +3,16 @@ import { Constants } from 'expo';
 
 // https://reactnavigation.org/docs/navigators/tab#tabBarOptions-for-TabBarBottom-default-tab-bar-on-iOS
 export const tabBarStyles = {
-    activeTintColor: '#E7A7C7',
+    activeTintColor: '#FFA300',
     activeBackgroundColor: '#FFF',
-    inactiveTintColor: '#666',
+    inactiveTintColor: '#6B757C',
     inactiveBackgroundColor: '#FFF',
     style: { // style of the whole bar
         backgroundColor: '#FFF',
     },
     labelStyle: { // style of the label part
-        backgroundColor: '#EEE',
-        // backgroundColor: '#F00',
+        backgroundColor: '#FFF',
+        fontFamily: 'Poppins_medium',
     },
 };
 
@@ -22,14 +22,17 @@ export const tabBarStyles = {
 // (but you could do it also in root)
 export const stackNavStyles = {
     style: {
-        // backgroundColor: '#FAF',
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
     },
     header: {
         // backgroundColor: '#F00',
+        paddingRight: 14,
+        paddingLeft: 9,
     },
     headerTitle: {
         // backgroundColor: '#00F',
         // color: '#FF0',
+        fontFamily: 'Poppins_medium',
     },
 };
 
@@ -38,6 +41,14 @@ export default StyleSheet.create({
     // this root element is then calling the stackNav layout
     root: {
         flex: 1,
-        marginTop: Constants.statusBarHeight,
+        // marginTop: Constants.statusBarHeight,
+    },
+    backgroundImage: {
+        // flex: 1,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',        
     },
 });

@@ -1,6 +1,10 @@
 {
   "expo": {
     "sdkVersion": "17.0.0",
+    "androidStatusBar": {
+      "backgroundColor": "#0095AB",
+      "barStyle": "light-content"
+    },
     "icon": "./assets/icons/app-icon.png",
     "notification": {
       "icon": "./assets/icons/notification-icon.png"

@@ -26,13 +26,13 @@ export default class extends Component<DefaultProps, Props, State> {
 
     static navigationOptions = (props) => {
         return {
-            title: i18n.t('Activities'),
+            title: i18n.t('Activities').toUpperCase(),
             tabBarLabel: i18n.t('Activities'),
             tabBarIcon: ({ tintColor }) => (
                 <Ionicons name="md-basketball" size={26} color={tintColor} />
             ),
             headerRight: (
-                <Button rounded info title="Add" onPress={() => props.navigation.navigate('ActivityAdd')}>
+                <Button info title="Add" onPress={() => props.navigation.navigate('ActivityAdd')}>
                     <Text>Add</Text>
                 </Button>
             ),
@@ -69,7 +69,7 @@ export default class extends Component<DefaultProps, Props, State> {
                             </Text>
                         </Body>
                         <Right>
-                            <Button rounded info onPress={() => this.doActivity()}>
+                            <Button large rounded onPress={() => this.doActivity()}>
                                 <Text>Do</Text>
                             </Button>
                         </Right>

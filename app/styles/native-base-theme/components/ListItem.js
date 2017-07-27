@@ -6,6 +6,8 @@ import variable from './../variables/platform';
 export default (variables = variable) => {
     const platform = variables.platform;
 
+    variables.borderWidth = variables.listItemBorderWidth;
+
     const listItemTheme = {
         'NativeBase.InputGroup': {
             'NativeBase.Icon': {
@@ -232,7 +234,7 @@ export default (variables = variable) => {
                 },
                 flex: 1,
                 paddingVertical: variables.listItemPadding,
-                borderBottomWidth: variables.borderWidth,
+                // borderBottomWidth: variables.borderWidth,
                 borderColor: variables.listBorderColor,
                 marginLeft: variables.listItemPadding + 5
             },
@@ -244,12 +246,13 @@ export default (variables = variable) => {
                 },
                 flex: 0,
                 paddingRight: variables.listItemPadding + 5,
-                alignSelf: 'stretch',
+                // alignSelf: 'stretch',
+                alignSelf: 'center',
                 paddingVertical: variables.listItemPadding,
-                borderBottomWidth: variables.borderWidth,
+                // borderBottomWidth: variables.borderWidth,
                 borderColor: variables.listBorderColor
             },
-            borderBottomWidth: null,
+            borderBottomWidth: variables.borderWidth,
             paddingVertical: null,
             paddingRight: null
         },
@@ -397,7 +400,8 @@ export default (variables = variable) => {
         paddingRight: variables.listItemPadding + 5,
         paddingVertical: variables.listItemPadding + 3,
         marginLeft: variables.listItemPadding + 5,
-        borderBottomWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
+        marginRight: variables.listItemPadding + 5,
+        borderBottomWidth: variables.borderWidth,
         backgroundColor: variables.listBg,
         borderColor: variables.listBorderColor
     };

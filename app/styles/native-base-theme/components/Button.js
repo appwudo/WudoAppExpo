@@ -270,7 +270,7 @@ export default (variables = variable) => {
         },
 
         '.rounded': {
-            paddingHorizontal: variables.buttonPadding + 20,
+            paddingHorizontal: variables.buttonPadding + 8,
             borderRadius: variables.borderRadiusLarge
         },
 

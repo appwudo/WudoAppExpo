@@ -22,7 +22,7 @@ export default {
     badgePadding: platform === 'ios' ? 3 : 0,
 
     // Button
-    btnFontFamily: platform === 'ios' ? 'System' : 'Poppins_medium',
+    btnFontFamily: 'Poppins_medium',
     btnDisabledBg: '#a7c9d1',
     btnDisabledClr: '#0ae2f2',
 
@@ -92,7 +92,7 @@ export default {
         return this.fontSizeBase * 0.8;
     },
     get borderRadiusLarge() {
-        return this.fontSizeBase * 3.8;
+        return this.fontSizeBase * 1.4;
     },
 
     buttonPadding: 6,
@@ -116,7 +116,7 @@ export default {
     brandSidebar: '#FFBE8D',
 
     // Font
-    fontFamily: platform === 'ios' ? 'System' : 'Roboto',
+    fontFamily: 'Poppins_medium',
     fontSizeBase: 15,
 
     get fontSizeH1() {
@@ -201,7 +201,8 @@ export default {
     lineHeight: platform === 'ios' ? 20 : 24,
 
     // List
-    listBorderColor: '#c9c9c9',
+    // listBorderColor: '#A7C9D1',
+    listBorderColor: 'rgba(167, 201, 209, 0.2)',
     listDividerBg: '#f4f4f4',
     listItemHeight: 45,
     listBtnUnderlayColor: '#DDD',
@@ -247,7 +248,7 @@ export default {
     noteFontSize: 14,
 
     // Title
-    titleFontfamily: platform === 'ios' ? 'System' : 'Roboto_medium',
+    titleFontfamily: 'Poppins_bold',
     titleFontSize: platform === 'ios' ? 17 : 19,
     subTitleFontSize: platform === 'ios' ? 12 : 14,
     subtitleColor: '#FFF',
@@ -256,8 +257,9 @@ export default {
     titleFontColor: '#FFF',
 
     // Other
-    borderRadiusBase: platform === 'ios' ? 5 : 2,
+    borderRadiusBase: 10,
     borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
+    listItemBorderWidth: 6 / PixelRatio.getPixelSizeForLayoutSize(1),
     contentPadding: 10,
 
     get darkenHeader() {
